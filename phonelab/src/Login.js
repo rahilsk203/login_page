@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import users from "./users.json"; // Replace with your users.json path
 import illustration from "./illustration.png"; // Replace with your image path
 import "mdb-react-ui-kit/dist/css/mdb.min.css"; // Import MDBootstrap CSS
+import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import React Icons
 import "./Login.css";
 
 function Login() {
@@ -68,7 +69,7 @@ function Login() {
                 <input
                   type="email"
                   id="email"
-                  className="form-control"
+                  className="form-control custom-input"
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -85,7 +86,7 @@ function Login() {
                   <input
                     type={showPassword ? "text" : "password"}
                     id="password"
-                    className="form-control"
+                    className="form-control custom-input"
                     placeholder="Enter your password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
@@ -96,7 +97,11 @@ function Login() {
                     className="btn btn-outline-secondary"
                     onClick={() => setShowPassword(!showPassword)}
                   >
-                    {showPassword ? "Hide" : "Show"}
+                    {showPassword ? (
+                      <FaEyeSlash /> // Eye slash icon for hide
+                    ) : (
+                      <FaEye /> // Eye icon for show
+                    )}
                   </button>
                 </div>
               </div>

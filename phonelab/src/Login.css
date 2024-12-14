@@ -29,6 +29,11 @@ img {
 
 .form-control {
   border-radius: 6px;
+  border: 2px solid #ced4da; /* Softer, lighter border color */
+}
+
+.custom-input {
+  border: 2px solid #ced4da !important; /* Softer, lighter border color */
 }
 
 .form-outline label {
@@ -42,4 +47,20 @@ img {
 
 .text-muted {
   font-size: 13px;
+}
+
+.input-group button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.input-group button svg {
+  font-size: 20px;
+  color: #007bff;
+}
+
+.text-danger {
+  font-size: 14px;
 }
